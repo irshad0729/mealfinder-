@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+/* body section styling  */
+body {
+  background-image: var(--bs-gradient);
+  color: ghostwhite;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+h1 {
+  padding: 15px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container section styling  */
+.container {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.d-flex {
+  /* border: 1px solid black; */
+  width: 400px;
+}
+.flex {
+  position: relative;
+  display: flex;
+}
+/* styling for search input section  */
+input {
+  border: 1px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 14px;
+  padding: 4px 10px;
+  margin: 0;
+}
+input[type="text"] {
+  width: 300px;
+}
+/* styling for search button  */
+.search-btn {
+  cursor: pointer;
+  border-left: 0;
+  border-radius: 0;
+  border-top-right-radius: 4px;
+}
+/* Meals container  */
+.meals {
+  margin-top: 10px;
+  border: 2px solid ghostwhite;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-evenly;
+}
+/* adding images in meal dynamically  */
+.meal {
+  /* padding: 5px; */
+  cursor: pointer;
+  position: relative;
+  margin: 8px;
+  width: 275px;
+  height: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* meal images display  */
+.meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px ghostwhite solid;
+}
+.meal-info {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in;
+  color: #f2f2f2;
+  opacity: 0;
+}
+
+.meal:hover .meal-info {
+  opacity: 1;
+}
+
+/* Adjust the dimension of image for when screen size less than 800px */
+@media (max-width: 800px) {
+  .meal {
+    width: 200px;
+    height: 200px;
+  }
+}
+/* Adjust the dimension of image for when screen size less than 500px */
+
+@media (max-width: 500px) {
+  .meal {
+    width: 125px;
+    height: 125px;
+  }
+}
+/* CSS for favourite button  */
+.fav-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* css for autocomplete suggestion  */
+ul {
+  width: 250px;
+  height: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+}
+ul li:hover {
+  background: #f3f3f3;
+}
+#list label {
+  position: relative;
+  cursor: pointer;
+}
+
+.flexDiv {
+  border: 1px solid lightgrey;
+  position: relative;
+  width: 320px;
+}
+.result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  background-color: aquamarine;
+  display: none;
+}
+/* css autocompete suggestion list  */
+.suggestionList {
+  list-style-type: none;
+  width: 266px;
+  background: white;
+  color: black;
+}
